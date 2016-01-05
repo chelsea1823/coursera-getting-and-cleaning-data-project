@@ -2,8 +2,9 @@ library(reshape2)
 
 # dowload and unzip file 
 fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip" 
-download.file(fileUrl,destfile <- './data/project.zip',method = 'curl')
-if(!file.exists("UCI HAR Dataset")) {unzip("./data/project.zip")}
+download.file(fileUrl,destfile <- './data/project.zip',method = 'curl')  
+if(!file.exists("UCI HAR Dataset")) {unzip("./data/project.zip")}     # ./ relative path.
+# list.files () list all the files in the current directory
 
 # load activity labels and features 
 ActivityLabels <- read.table("UCI HAR Dataset/activity_labels.txt")
