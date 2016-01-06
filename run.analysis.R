@@ -20,7 +20,7 @@ FeaturesWanted <- gsub("[()-]","",FeaturesWanted)
 
 # Load train_data and combine
 TrainSubject <- read.table("UCI HAR Dataset/train/subject_train.txt")
-TrainMeasure <- read.table("UCI HAR Dataset/train/X_train.txt")[FeaturesIndex] #pick wanted columns
+TrainMeasure <- read.table("UCI HAR Dataset/train/X_train.txt")[FeaturesIndex] #default pick wanted columns, or [,FeaturesIndex]
 TrainActivity <- read.table("UCI HAR Dataset/train/y_train.txt")
 Train <- cbind(TrainSubject, TrainActivity, TrainMeasure)
 
